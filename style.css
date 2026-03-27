@@ -1,1 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Crushed&display=swap');
 
+header {
+    position: absolute;   /* ทำให้ลอย */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 1vw 2vw 0 2vw;
+}
+
+.logo {
+  font-family: "Crushed", sans-serif;
+  color: #c3002f;
+}
+
+/* YRV */
+.logo .initials {
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+/* กล่องซ่อน */
+.name-wrapper {
+  overflow: hidden;
+  margin-left: 10px;
+}
+
+/* ตัวหนังสือ */
+.logo .name {
+    line-height: 1;
+  font-weight: 400;
+  color: rgba(255, 255, 255);
+  white-space: nowrap;
+}
+
+/* animation เรียบ ๆ */
+.slide-out {
+  transform: translateX(-100%);
+  opacity: 0;
+  animation: slideSmooth 0.8s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes slideSmooth {
+  from {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.navbar {
+    background: transparent !important;
+  padding: 0;
+}
+
+/* เมนู */
+.nav-link {
+  font-family: "Barlow Condensed", sans-serif;
+  color: #ffffff;
+  font-weight: 400;
+  margin: 0 10px;
+}
+
+.nav-link:hover {
+  color: #c3002f;
+}
+
+/* ปุ่ม 3 ขีด */
+.navbar-toggler {
+  border: none;
+}
+
+/* ทำให้ icon เป็นสีเข้ม */
+.navbar-toggler-icon {
+  filter: invert(0);
+}
+
+.form-control {
+    font-family: "Barlow Condensed", sans-serif;
+    border-radius: 0;
+}
+
+.btn {
+    color: #ffffff;
+    font-family: "Barlow Condensed", sans-serif;
+    border-radius: 0;
+}
+
+.btn:hover {
+    background-color: #c3002f;
+}
+
+/* responsive spacing */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    margin-top: 10px;
+  }
+
+  .nav-link {
+    margin: 10px 0;
+  }
+}
+
+/* section เต็มจอ */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* video เต็มจอ */
+.hero video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* overlay ดำบาง ๆ */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 2;
+}
+
+/* content กลางจอ */
+.content {
+  font-family: "Crushed", sans-serif; line-height: 0;
+  position: relative;
+  z-index: 3;
+  color: white;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.content h1 {
+    font-size: 22vw;
+}
+
+/* ปุ่มเสียง */
+#soundToggle {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 4;
+  background: rgba(0,0,0,0.6);
+  border: none;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+}

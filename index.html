@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
 
+<body>
+    <header>
+  <nav class="navbar navbar-expand-lg bg-transparent px-3">
+    
+    <!-- Logo -->
+    <a class="navbar-brand" href="#">
+  <div class="logo d-flex align-items-center">
+    <div class="initials display-1">YRV</div>
+    
+    <div class="name-wrapper">
+      <div class="name fs-2 slide-out">THAMMASAT <br> OFFICIAL STORE</div>
+    </div>
+  </div>
+</a>
+
+    <!-- ปุ่ม 3 ขีด (มือถือ) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Content -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+
+      <!-- เมนูตรงกลาง -->
+      <ul class="navbar-nav mx-auto text-center">
+        <li class="nav-item">
+          <a class="nav-link fs-5" href="#">Collections</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-5" href="#">gift</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-5" href="#">bag</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-5" href="#">women</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-5" href="#">men</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-5" href="#">Limited Edition</a>
+        </li>
+      </ul>
+
+      <!-- Search ด้านขวา -->
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-light" type="submit">Search</button>
+      </form>
+
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  
+  <!-- วิดีโอพื้นหลัง -->
+  <video autoplay muted loop playsinline id="bgVideo">
+    <source src="resources/Promovid.mp4" type="video/mp4">
+  </video>
+
+  <!-- overlay (ให้ตัวหนังสืออ่านง่าย) -->
+  <div class="overlay"></div>
+
+  <!-- เนื้อหา -->
+  <div class="content">
+    <h1>Why Are We</h1>
+  </div>
+
+  <!-- ปุ่มเปิด/ปิดเสียง -->
+  <button id="soundToggle">🔇</button>
+
+</section>
+
+<script>
+  const video = document.getElementById("bgVideo");
+  const btn = document.getElementById("soundToggle");
+
+  btn.addEventListener("click", () => {
+    video.muted = !video.muted;
+
+    if (video.muted) {
+      btn.textContent = "🔇";
+    } else {
+      btn.textContent = "🔊";
+    }
+  });
+</script>
+
+</body>
+</html>
