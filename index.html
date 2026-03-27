@@ -25,7 +25,7 @@
 </a>
 
     <!-- ปุ่ม 3 ขีด (มือถือ) -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+    <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -35,7 +35,7 @@
       <!-- เมนูตรงกลาง -->
       <ul class="navbar-nav mx-auto text-center">
         <li class="nav-item">
-          <a class="nav-link fs-5" href="#">Collections</a>
+          <a class="nav-link fs-5" href="subpages/Collections.html">Collections</a>
         </li>
         <li class="nav-item">
           <a class="nav-link fs-5" href="#">gift</a>
@@ -53,13 +53,6 @@
           <a class="nav-link fs-5" href="#">Limited Edition</a>
         </li>
       </ul>
-
-      <!-- Search ด้านขวา -->
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search">
-        <button class="btn btn-outline-light" type="submit">Search</button>
-      </form>
-
     </div>
   </nav>
 </header>
@@ -76,11 +69,12 @@
 
   <!-- เนื้อหา -->
   <div class="content">
-    <h1>Why Are We</h1>
+    <p>y<br>r<br>v</p>
+    <div>THAMMASAT OFFICIAL STORE</div>
   </div>
 
   <!-- ปุ่มเปิด/ปิดเสียง -->
-  <button id="soundToggle">🔇</button>
+  <button id="soundToggle">🕪×</button>
 
 </section>
 
@@ -92,12 +86,83 @@
     video.muted = !video.muted;
 
     if (video.muted) {
-      btn.textContent = "🔇";
+      btn.textContent = "🕪×";
     } else {
-      btn.textContent = "🔊";
+      btn.textContent = "🕪";
     }
   });
 </script>
+
+<footer class="footer mt-5">
+  <div class="container py-5">
+
+    <div class="row">
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="footer-brand display-1">YRV</h5>
+        <p class="small fs-5">
+          Why Are We<br>
+          Official Merchandise of Thammasat University
+        </p>
+      </div>
+
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h6 class="footer-title fs-3">Shop</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Best Sellers</a></li>
+          <li><a href="#">Limited Edition</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h6 class="footer-title fs-3">University</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">About Thammasat</a></li>
+          <li><a href="#">Faculties</a></li>
+          <li><a href="#">Campus Life</a></li>
+          <li><a href="#">Alumni</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h6 class="footer-title fs-3">Support</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-12">
+        <h6 class="footer-title fs-3">Join YRV</h6>
+        <p class="small">Get updates on new drops and collections.</p>
+        <form class="d-flex">
+          <input type="email" class="form-control me-2" placeholder="Email">
+          <button class="btn btn-outline-light">Join</button>
+        </form>
+      </div>
+
+    </div>
+
+    <hr class="my-4">
+
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small">
+      <p class="mb-2 mb-md-0">
+        © 2026 YRV — Thammasat Official Store
+      </p>
+
+      <div class="footer-links fs-6">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
 
 </body>
 </html>

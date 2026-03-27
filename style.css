@@ -80,21 +80,6 @@ header {
   filter: invert(0);
 }
 
-.form-control {
-    font-family: "Barlow Condensed", sans-serif;
-    border-radius: 0;
-}
-
-.btn {
-    color: #ffffff;
-    font-family: "Barlow Condensed", sans-serif;
-    border-radius: 0;
-}
-
-.btn:hover {
-    background-color: #c3002f;
-}
-
 /* responsive spacing */
 @media (max-width: 991px) {
   .navbar-collapse {
@@ -121,6 +106,7 @@ header {
   min-width: 100%;
   min-height: 100%;
   transform: translate(-50%, -50%);
+  filter: grayscale(100%) brightness(0.8) contrast(0.9);
   object-fit: cover;
   z-index: 1;
 }
@@ -130,7 +116,7 @@ header {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.2);
   z-index: 2;
 }
 
@@ -138,15 +124,22 @@ header {
 .content {
   font-family: "Crushed", sans-serif; line-height: 0;
   position: relative;
-  z-index: 3;
-  color: white;
-  text-align: center;
-  top: 50%;
+  z-index: 3; opacity: 0.15;
+  color: #ffffff;
+  text-align: left;
+  left: 5%;
+  top: 53%;
   transform: translateY(-50%);
 }
 
-.content h1 {
-    font-size: 22vw;
+.content p {
+    font-size: 31vh; line-height: 0.8; color: #fff;
+  text-transform: uppercase;
+}
+
+.content div {
+    font-size: 5vh; line-height: 0.8; color: #fff;
+  text-transform: uppercase;
 }
 
 /* ปุ่มเสียง */
@@ -162,4 +155,50 @@ header {
   border-radius: 50%;
   cursor: pointer;
   font-size: 18px;
+}
+
+.footer {
+  background: #ffffff;
+  color: #c3002f;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.footer a {
+  color: #383838;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.footer a:hover {
+  color: #c3002f;
+}
+
+.footer-title {
+    font-family: "Crushed", sans-serif;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-brand {
+  font-family: "Crushed", sans-serif;
+  color: #c3002f;
+}
+
+.footer input {
+  background: transparent;
+  border: 1px solid #444;
+  color: #000000;
+}
+
+.footer input::placeholder {
+  color: #888;
+}
+
+.footer .btn {
+  border-radius: 0;
+}
+
+.footer-links a {
+  margin-left: 15px;
 }
